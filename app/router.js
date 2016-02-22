@@ -6,6 +6,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('service-option', { path: "service-option/:service_option_id" });
+  this.route('clinic', { path: "clinic/:clinic_id" });
 });
 
 export default Router;

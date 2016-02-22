@@ -365,7 +365,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("smart-client-app/app")["default"].create({"name":"smart-client-app","version":"0.0.0+"});
+  require("smart-client-app/app")["default"].create({"name":"smart-client-app","version":"0.0.0+5cfca44e"});
 }
 
 /* jshint ignore:end */
