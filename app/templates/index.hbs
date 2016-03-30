@@ -1,3 +1,7 @@
 <h3>Service Options</h3>
 
+{{#unless session.isAuthenticated}}
+ {{login-form}}
+{{/unless}}
+
 {{outlet}}

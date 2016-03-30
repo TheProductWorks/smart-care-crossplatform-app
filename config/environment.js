@@ -26,7 +26,7 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
-    ENV.api = "http://localhost:5000";
+    ENV.host = "http://localhost:5000";
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -47,8 +47,15 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.api = "http://localhost:5000";
+    ENV.host = "http://localhost:5000";
   }
+
+  ENV['simple-auth'] = {
+    store: 'simple-auth-session-store:local-storage',
+    authorizer: 'authorizer:custom',
+    crossOriginWhitelist: [ENV.host],
+    routeAfterAuthentication: '/dashboard'
+  };
 
   return ENV;
 };
