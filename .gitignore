@@ -15,4 +15,8 @@ www/*
 /libpeerconnection.log
 npm-debug.log
 testem.log
+.api_key
+
+*/.DS_Store
+.DS_Store
 

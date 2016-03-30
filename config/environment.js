@@ -1,7 +1,13 @@
+var path = require('path')
+, fs = require('fs');
 /* jshint node: true */
 
 module.exports = function(environment) {
+  var main_dir = path.join(path.dirname(fs.realpathSync(__filename)), '..');
+  var api_key = fs.readFileSync(main_dir + '/.api_key', 'utf8');
+
   var ENV = {
+    api_key: api_key,
     modulePrefix: 'smart-client-app',
     environment: environment,
     baseURL: '/',
@@ -20,6 +26,7 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
+    ENV.api = "http://localhost:5000";
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -40,7 +47,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.api = "http://localhost:5000";
   }
 
   return ENV;

@@ -1,13 +1,3 @@
 <h3>Service Options</h3>
 
-<ul>
-{{#each model as |service_option|}}
-  <li>
-    {{#link-to "service-option" service_option}}
-      {{service_option.name}}
-    {{/link-to}}
-  </li>
-{{/each}}
-</ul>
-
 {{outlet}}
