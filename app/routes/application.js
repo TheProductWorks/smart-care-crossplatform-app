@@ -13,6 +13,7 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
         type: 'POST',
         beforeSend: function (xhr) {
            xhr.setRequestHeader('Auth-Token', accessToken);
+           xhr.setRequestHeader('Api-Key', ENV.api_key);
         }
       });
       this.get('session').invalidate();
