@@ -28,3 +28,13 @@
   </div>
 </div>
 
+<div class="row">
+  <ul>
+  {{#each serviceUsers as |su|}}
+    <li>
+      <small>{{su.hospital_number}}</small>
+      {{su.personal_fields.name}}
+    </li>
+  {{/each}}
+  </ul>
+</div>
