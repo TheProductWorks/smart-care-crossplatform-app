@@ -11,7 +11,7 @@ module.exports = function(environment) {
     modulePrefix: 'smart-client-app',
     environment: environment,
     baseURL: '/',
-    locationType: 'hash',
+    locationType: 'auto',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
