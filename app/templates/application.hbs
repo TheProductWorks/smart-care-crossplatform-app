@@ -15,21 +15,24 @@
     <!-- Collection of nav links and other content for toggling -->
     <div id="navbarCollapse" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li>
-          {{#link-to 'index'}}Home{{/link-to}}
-        </li>
-        <li>
-          {{#link-to 'search-patient'}}Search Patient{{/link-to}}
-        </li>
-        <li>
-          {{#link-to 'index'}}Book Appointment{{/link-to}}
-        </li>
-        <li>
-          {{#link-to 'index'}}Start / Stop Clinic{{/link-to}}
-        </li>
-        <li>
-          {{#link-to 'index'}}Today's Appointments{{/link-to}}
-        </li>
+        {{#link-to "dashboard" tagName="li"}}
+          <a {{bind-attr href="view.href"}}>Home</a>
+        {{/link-to}}
+        {{#link-to "search-patient" tagName="li"}}
+          <a {{bind-attr href="view.href"}}>Search Patient</a>
+        {{/link-to}}
+        {{#link-to "index" tagName="li"}}
+          <a {{bind-attr href="view.href"}}>Book Appointment</a>
+        {{/link-to}}
+        {{#link-to "index" tagName="li"}}
+          <a {{bind-attr href="view.href"}}>Start / Stop Clinic</a>
+        {{/link-to}}
+        {{#link-to "index" tagName="li"}}
+          <a {{bind-attr href="view.href"}}>Today's Appointments</a>
+        {{/link-to}}
+        {{#link-to "index" tagName="li"}}
+          <a {{bind-attr href="view.href"}}>Sync</a>
+        {{/link-to}}
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>

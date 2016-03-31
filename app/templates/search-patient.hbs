@@ -1,3 +1,30 @@
-<h1>Search Patient</h1>
+<div class="row">
+  <div class="col-md-12">
+    {{input value=name placeholder='Enter Name Here' class='form-control'}}
+  </div>
+</div>
+<br/>
+<div class="row">
+  <div class="col-md-12">
+    {{input value=hospitalNumber placeholder='Enter Hospital Number Here' class='form-control'}}
+  </div>
+</div>
+<br/>
+<div class="row">
+  <div class="col-md-4">
+    {{input value=dobDay placeholder='Day' class='form-control'}}
+  </div>
+  <div class="col-md-4">
+    {{input value=dobMonth placeholder='Month' class='form-control'}}
+  </div>
+  <div class="col-md-4">
+    {{input value=dobYear placeholder='Year' class='form-control'}}
+  </div>
+</div>
+<br/>
+<div class="row">
+  <div class="col-md-12">
+    <button class="btn btn-success btn-block btn-success" {{action 'searchServiceUser'}}>Search</button>
+  </div>
+</div>
 
-{{outlet}}
