@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('login');
   this.route('dashboard');
   this.route('search-patient');
+  this.route('service-user', { path: '/service-user/:id' });
 });
 
 export default Router;

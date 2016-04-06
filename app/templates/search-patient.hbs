@@ -28,13 +28,16 @@
   </div>
 </div>
 
+<br/>
 <div class="row">
-  <ul>
-  {{#each serviceUsers as |su|}}
-    <li>
-      <small>{{su.hospital_number}}</small>
-      {{su.personal_fields.name}}
-    </li>
-  {{/each}}
-  </ul>
+  <div class="col-md-12">
+    <div class="list-group">
+    {{#each serviceUsers as |su|}}
+      {{#link-to 'service-user' su.id class="list-group-item"}}
+        <h4 class="list-group-item-heading">{{su.personal_fields.name}}</h4>
+        <p class="list-group-item-text">{{su.hospital_number}}<span class="pull-right">{{su.personal_fields.dob}}</span></p>
+      {{/link-to}}
+    {{/each}}
+    </div>
+  </div>
 </div>
