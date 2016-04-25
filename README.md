@@ -1,7 +1,6 @@
-# Smart-client-app
+# Smart Client Crossplatform application
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+SMART Client App using Phonegap, Cordova and Ember.js
 
 ## Prerequisites
 
@@ -12,6 +11,7 @@ You will need the following things properly installed on your computer.
 * [Bower](http://bower.io/)
 * [Ember CLI](http://www.ember-cli.com/)
 * [PhantomJS](http://phantomjs.org/)
+* [Phonegap](http://docs.phonegap.com/references/desktop-app/)
 
 ## Installation
 
@@ -22,26 +22,26 @@ You will need the following things properly installed on your computer.
 
 ## Running / Development
 
-* `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+### Browser
 
-### Code Generators
+* `ember serve`
+* Visit your app at [http://localhost:9000](http://localhost:9000).
 
-Make use of the many generators for code, try `ember help generate` for more details
+### Phone
 
-### Running Tests
-
-* `ember test`
-* `ember test --server`
+* Install the development app from phonegap from the respective app store.
+* Start your Phonegap deskrop application, pointing at the repo's main folder.
+* Connect on your phone to the port you specified in the desktop app, via the local network.
 
 ### Building
 
-* `ember build` (development)
-* `ember build --environment production` (production)
+* `cordova build` (development)
+* `cordova build windows` (windows app)
+* `cordova build android` (android app)
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+TODO
 
 ## Further Reading / Useful Links
 
@@ -50,4 +50,5 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+  * [Cordova CLI reference](http://docs.phonegap.com/en/edge/guide_cli_index.md.html#The%20Command-Line%20Interface)
+* [Build for Windows Phone](https://cordova.apache.org/docs/en/4.0.0/guide/platforms/wp8/)
