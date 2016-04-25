@@ -52,3 +52,4 @@ TODO
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
   * [Cordova CLI reference](http://docs.phonegap.com/en/edge/guide_cli_index.md.html#The%20Command-Line%20Interface)
 * [Build for Windows Phone](https://cordova.apache.org/docs/en/4.0.0/guide/platforms/wp8/)
+* [Cordova hooks](https://cordova.apache.org/docs/en/dev/guide/appdev/hooks/)
