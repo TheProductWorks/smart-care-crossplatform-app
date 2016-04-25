@@ -1,0 +1,27 @@
+<br/>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <dl class="dl-horizontal">
+      <dt>Age</dt>
+      <dd>{{model.age}}</dd>
+      <dt>EDD</dt>
+      <dd>{{model.current_pregnancy.estimated_delivery_date}}</dd>
+      <dt>Gestation</dt>
+      <dd>{{model.gestation}}</dd>
+      <dt>Last Period</dt>
+      <dd>{{model.current_pregnancy.last_menstrual_period}}</dd>
+      <dt>Blood Group</dt>
+      <dd>{{model.clinical_fields.blood_group}}</dd>
+      <dt>Rhesus</dt>
+      <dd>
+        {{#if model.clinical_fields.rhesus}}
+          Positive
+        {{else}}
+          Negative
+        {{/if}}
+      </dd>
+      <dt>Parity</dt>
+      <dd>{{model.clinical_fields.parity}}</dd>
+    </dl>
+  </div>
+</div>

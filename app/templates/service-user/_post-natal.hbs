@@ -1,0 +1,43 @@
+<br/>
+<div class="panel panel-default">
+  <div class="panel-heading">Mother</div>
+  <div class="panel-body">
+    <dl class="dl-horizontal">
+      <dt>Birth Mode</dt>
+      <dd>{{model.current_pregnancy.birth_mode}}</dd>
+      <dt>Perineum</dt>
+      <dd>{{model.current_pregnancy.perineum}}</dd>
+      <dt>Anti-D</dt>
+      <dd>{{model.current_pregnancy.anti_d}}</dd>
+      <dt>Feeding</dt>
+      <dd>{{model.current_pregnancy.feeding}}</dd>
+      <dt>Midwifery Log</dt>
+      <dd><a href="#">View <span class="glyphicon glyphicon-list" aria-hidden="true"></span></a></dd>
+    </dl>
+  </div>
+</div>
+{{#each model.current_babies as |baby| }}
+  <div class="panel panel-default">
+    <div class="panel-heading">Baby {{baby.name}}</div>
+    <div class="panel-body">
+      <dl class="dl-horizontal">
+        <dt>Date of Delivery</dt>
+        <dd>{{baby.delivery_date}}</dd>
+        <dt>Time of Delivery</dt>
+        <dd>{{baby.delivery_time}}</dd>
+        <dt>Days Since Birth</dt>
+        <dd>{{baby.days_since_birth}}</dd>
+        <dt>Sex of Baby</dt>
+        <dd>{{baby.gender}}</dd>
+        <dt>Birth Weight</dt>
+        <dd>{{baby.kg_weight}}</dd>
+        <dt>VitK</dt>
+        <dd><a href="#">{{baby.vit_k}} <span class="glyphicon glyphicon-list" aria-hidden="true"></span></a></dd>
+        <dt>Hearing</dt>
+        <dd><a href="#">{{baby.hearing}} <span class="glyphicon glyphicon-list" aria-hidden="true"></span></a></dd>
+        <dt>NBST</dt>
+        <dd><a href="#">{{baby.nbst}} <span class="glyphicon glyphicon-list" aria-hidden="true"></span></a></dd>
+      </dl>
+    </div>
+  </div>
+{{/each}}

@@ -1,10 +1,10 @@
-<div class="row text-center" role="tabpanel">
+<div class="row" role="tabpanel">
   <div class="col-md-12">
     <h1>{{model.personal_fields.name}}</h1>
     <h4><small>Age: {{model.age}} | Parity: {{model.clinical_fields.parity}}</small></h4>
   </div>
   <div class="col-md-12">
-    <ul class="nav nav-tabs" role="tablist">
+    <ul class="nav nav-tabs text-center" role="tablist">
       <li role="presentation" class="col-xs-4"><a role="tab" href="#ante-natal" data-toggle="tab">Ante Natal</a></li>
       <li role="presentation" class="col-xs-4 active"><a role="tab" href="#contact" data-toggle="tab" class="active">Contact</a></li>
       <li role="presentation" class="col-xs-4"><a role="tab" href="#post-natal" data-toggle="tab">Post Natal</a></li>
@@ -13,64 +13,13 @@
   <div class="col-md-12">
     <div class="tab-content">
       <div id="ante-natal" class="tab-pane" role="tabpanel">
-        <div class="panel">
-          <div class="panel-body">
-            <dl class="dl-horizontal">
-              <dt>Age</dt>
-              <dd>{{model.age}}</dd>
-              <dt>EDD</dt>
-              <dd>{{model.current_pregnancy.estimated_delivery_date}}</dd>
-              <dt>Gestation</dt>
-              <dd>{{model.gestation}}</dd>
-              <dt>Last Period</dt>
-              <dd>{{model.current_pregnancy.last_menstrual_period}}</dd>
-              <dt>Blood Group</dt>
-              <dd>{{model.clinical_fields.blood_group}}</dd>
-              <dt>Rhesus</dt>
-              <dd>
-                {{#if model.clinical_fields.rhesus}}
-                  Positive
-                {{else}}
-                  Negative
-                {{/if}}
-              </dd>
-              <dt>Parity</dt>
-              <dd>{{model.clinical_fields.parity}}</dd>
-            </dl>
-          </div>
-        </div>
+        {{partial "service-user/ante-natal"}}
       </div>
       <div id="contact" class="tab-pane active" role="tabpanel">
-        <div class="panel">
-          <div class="panel-body">
-            <dl class="dl-horizontal">
-              <dt>Phone Number</dt>
-              <dd>{{model.personal_fields.mobile_phone}}</dd>
-              {{#if model.personal_fields.home_phone}}
-                <dt>Home Phone Number</dt>
-                <dd>{{model.personal_fields.home_phone}}</dd>
-              {{/if}}
-              <dt>Hospital Number</dt>
-              <dd>{{model.hospital_number}}</dd>
-              <dt>Email</dt>
-              <dd>{{model.personal_fields.email}}</dd>
-              <dt>Address</dt>
-              <dd>
-                {{model.personal_fields.home_address_line1}},
-                {{model.personal_fields.home_city}},
-                {{model.personal_fields.home_post_code}},
-                {{model.personal_fields.home_county}}
-              </dd>
-              <dt>Secondary Contact</dt>
-              <dd>{{model.personal_fields.next_of_kin_name}}</dd>
-              <dt>Secondary Phone</dt>
-              <dd>{{model.personal_fields.next_of_kin_phone}}</dd>
-            </dl>
-          </div>
-        </div>
+        {{partial "service-user/contact"}}
       </div>
       <div id="post-natal" class="tab-pane" role="tabpanel">
-
+        {{partial "service-user/post-natal"}}
       </div>
     </div>
   </div>

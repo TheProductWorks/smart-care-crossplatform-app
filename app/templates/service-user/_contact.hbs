@@ -1,0 +1,28 @@
+<br/>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <dl class="dl-horizontal">
+      <dt>Phone Number</dt>
+      <dd>{{model.personal_fields.mobile_phone}}</dd>
+      {{#if model.personal_fields.home_phone}}
+        <dt>Home Phone Number</dt>
+        <dd>{{model.personal_fields.home_phone}}</dd>
+      {{/if}}
+      <dt>Hospital Number</dt>
+      <dd>{{model.hospital_number}}</dd>
+      <dt>Email</dt>
+      <dd>{{model.personal_fields.email}}</dd>
+      <dt>Address</dt>
+      <dd>
+        {{model.personal_fields.home_address_line1}},
+        {{model.personal_fields.home_city}},
+        {{model.personal_fields.home_post_code}},
+        {{model.personal_fields.home_county}}
+      </dd>
+      <dt>Secondary Contact</dt>
+      <dd>{{model.personal_fields.next_of_kin_name}}</dd>
+      <dt>Secondary Phone</dt>
+      <dd>{{model.personal_fields.next_of_kin_phone}}</dd>
+    </dl>
+  </div>
+</div>
