@@ -12,7 +12,7 @@ export default DS.Model.extend({
   created_at: DS.attr(),
   baby_age: DS.attr(),
   babies: DS.hasMany('baby'),
-  anti_d_histories: DS.hasMany('antiDHistory'),
+  anti_d_histories: DS.hasMany('anti_d_history'),
   feeding_histories: DS.hasMany('feedingHistory'),
   // For some reason Notes are failing to retrrieve
   //pregnancy_notes: DS.hasMany('pregnancyNote', {async: false}),
