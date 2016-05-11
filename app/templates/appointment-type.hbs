@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-xs-6">
+    <h2>Appointment Type</h2>
+    <ul class="list-group">
+      <li class="list-group-item">
+        {{type}}
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-6">
+    <h2>Service Option</h2>
+    <ul class="list-group">
+      {{#each service_options as |so|}}
+        <li class="list-group-item">
+          {{#link-to 'service-option' so}}
+            {{so.name}}
+          {{/link-to}}
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
