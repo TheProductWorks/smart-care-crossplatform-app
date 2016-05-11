@@ -31,7 +31,10 @@
 <div class="row">
   <div class="col-xs-6">
     <h4>Week</h4>
-    <ul class="list-group">
-    </ul>
+    <div class="list-group">
+      {{#each next_weeks as |week|}}
+        <button type="button" class="btn btn-default list-group-item" {{action 'dateChosen' week.date}}>Week {{week.weekName}} - {{week.formattedDate}}</button>
+      {{/each}}
+    </div>
   </div>
 </div>
