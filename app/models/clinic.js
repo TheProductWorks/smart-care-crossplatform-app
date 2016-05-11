@@ -11,5 +11,5 @@ export default DS.Model.extend({
   days: DS.attr(),
   appointments: DS.hasMany('appointment'),
   announcements: DS.hasMany('announcement',  {async: true }),
-  service_option: DS.belongsTo('service-option')
+  service_option: DS.belongsTo('service-option', {async: true})
 });

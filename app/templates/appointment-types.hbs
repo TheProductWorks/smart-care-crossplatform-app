@@ -1,14 +1,12 @@
 <div class="row">
   <div class="col-xs-6">
-    <h2>Appointment Type</h2>
-    <ul class="list-group">
+    <h4>Appointment Type</h4>
+    <div class="list-group">
       {{#each types as |type|}}
-        <li class="list-group-item">
-          {{#link-to 'appointment-type' type}}
+          {{#link-to 'appointment-type' type class="list-group-item"}}
             {{type}}
           {{/link-to}}
-        </li>
       {{/each}}
-    </ul>
+    </div>
   </div>
 </div>
