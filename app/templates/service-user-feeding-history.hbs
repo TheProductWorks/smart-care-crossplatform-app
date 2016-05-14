@@ -1,0 +1,37 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Feeding History</div>
+  <div class="panel-body">
+    <ul id="feeding_history_list" class="list-group">
+      {{#each model.current_pregnancy.feeding_histories as |feeding_history|}}
+        <li class="list-group-item">{{feeding_history.feeding}} ({{feeding_history.formatted_time}} by {{feeding_history.service_provider.name}})</li>
+      {{/each}}
+      <li><button class="btn btn-primary col-xs-12" data-toggle="modal" data-target="#add_feeding_modal">Add</button></li>
+    </ul>
+  </div>
+</div>
+
+<div id="add_feeding_modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Add Feeding Log</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <select id="add_feeding_select" class="form-control">
+            <option>Select One...</option>
+            <option>Bottle</option>
+            <option>Breast</option>
+            <option>Mixed</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" {{action "add_feeding_history"}}>Add</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>

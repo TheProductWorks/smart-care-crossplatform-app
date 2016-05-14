@@ -12,6 +12,7 @@ Router.map(function() {
   // Service User
   this.route('search-patient');
   this.route('service-user', { path: '/service-user/:id' });
+  this.route('service-user-feeding-history', { path: '/service-user/:id/feeding-history' });
 
   // Appointment
   this.route('appointment-types');
