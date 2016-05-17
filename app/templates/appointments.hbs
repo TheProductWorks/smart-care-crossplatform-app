@@ -1,1 +1,61 @@
-{{outlet}}
+  <table class="table">
+    <thead>
+      <h3 style="text-align: center;">{{selectedDateFormatted}}</h3>
+      <ul class="pager">
+        <li {{action 'dateForward'}}><a href=""><span class="glyphicon glyphicon-step-backward"></span>Prev</a></li>
+        <li {{action 'dateBackward'}}><a href="">Next<span class="glyphicon glyphicon-step-forward"></span></a></li>
+      </ul>
+    </thead>
+    {{#each times as |time|}}
+      <tbody>
+        {{#if service_user}}
+          <tr>
+            <td>
+              {{time.time}}
+            </td>
+            <td>
+              {{#link-to 'service_user.personal' service_user.id}}
+                {{service_user.personal_fields.name}}
+              {{/link-to}}
+            </td>
+            <td>
+              {{service_user.gestation}}
+            </td>
+            <td>
+              <button class="btn btn-xs btn-info" {{action 'openAppointmentModal' appointment}}>
+                <span class="glyphicon glyphicon-edit"></span> Change
+              </button>
+            </td>
+            {{#if appointment.attended}}
+              <td>
+                Attended
+                <button class="btn btn-xs btn-info" {{action 'toggleAttended' appointment.id}}>
+                  <span class="glyphicon glyphicon-remove"></span> Mark Unattended
+                </button>
+              </td>
+            {{else}}
+              <td>
+                Not attended
+                <button class="btn btn-xs btn-info" {{action 'toggleAttended' appointment.id}}>
+                  <span class="glyphicon glyphicon-ok"></span> Mark Attended
+                </button>
+              </td>
+            {{/if}}
+          </tr>
+        {{else}}
+          <tr>
+            <td>
+              {{time.time}}
+            </td>
+            <td>
+              <div {{action 'openBookingModal' time.time}}>
+                <span class="glyphicon glyphicon-plus-sign"></span> Free Slot
+              </div>
+            </td>
+            <td></td>
+            <td></td>
+          </tr>
+        {{/if}}
+      </tbody>
+    {{/each}}
+  </table>

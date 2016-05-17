@@ -33,7 +33,9 @@
     <h4>Week</h4>
     <div class="list-group">
       {{#each next_weeks as |week|}}
-        <button type="button" class="btn btn-default list-group-item" {{action 'dateChosen' week.date}}>Week {{week.weekName}} - {{week.formattedDate}}</button>
+        {{#link-to "appointments" (query-params selectedDate=week.date clinic_id=model.id) class="btn btn-default list-group-item"}}
+          Week {{week.weekName}} - {{week.formattedDate}}
+        {{/link-to}}
       {{/each}}
     </div>
   </div>
